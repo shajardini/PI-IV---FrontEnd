@@ -1,0 +1,45 @@
+.area-grafico{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 90%;
+    max-width: 200px;
+
+}
+
+.area-grafico h2{
+    text-align: center;
+}
+
+.area-grafico hr{
+    text-align: center;
+    color: rgb(251, 76, 56);
+
+}
+
+.livro-por-faixa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-faixa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+hr{
+    text-align: center;
+    color: rgb(251, 76, 56);
+
+}
+
+.grafico{
+    box-sizing: border-box;
+    height: 100px;
+    width: 100px;
+}

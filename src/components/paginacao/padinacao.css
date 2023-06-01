@@ -1,0 +1,27 @@
+.pagination{
+    display: flex;
+    min-width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.page-button{
+    margin: 0px 10px;
+    padding: 5px;
+    background-color: salmon;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 3px solid black;
+}
+
+.page-button:hover{
+    background-color: white;
+    color: salmon;
+    border: 2px solid salmon;
+}
+
+.page-number{
+    font-weight: bold;
+}

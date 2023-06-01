@@ -1,0 +1,18 @@
+.area-grafico{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 90%;
+    min-width: 200px;
+
+}
+
+.area-grafico h2{
+    text-align: center;
+}
+
+.area-grafico hr{
+    text-align: center;
+    color: rgb(251, 76, 56);
+
+}

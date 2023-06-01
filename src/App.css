@@ -1,0 +1,26 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* define a altura mínima da página como 100% da viewport */
+}
+
+
+
+.main {
+  flex: 1; /* faz com que o conteúdo ocupe todo o espaço restante */
+  
+ 
+}
+
+
+.footer {
+  flex-shrink: 0; /* evita que o footer seja encolhido quando há pouco conteúdo na página */
+  /* position: fixed; define a posição fixa do footer */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fdf2fd;
+  text-align: center;
+  padding: 10px;
+}
+

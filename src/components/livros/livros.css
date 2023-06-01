@@ -1,0 +1,55 @@
+.container-livro{
+    display: Flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.container-livro h2{
+    margin-top: 20px;
+}
+
+.container-livro h3{
+    text-align: center;
+}
+.container-livro .caixa-livro{
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 30px;
+    margin: 20px;
+    width: 400px;
+    min-height: 600px;
+    transition: all 0.3s ease-out;
+    border-left: 3px solid salmon;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-livro .caixa-livro:hover{
+    transform: translateY(-5px);
+    
+}
+
+.container-livro .caixa-livro li,p{
+    color: #a3a5ae;
+    font-size: 16px;
+}
+.container-livro .caixa-livro img{
+    width: 150px;
+    border: 1px solid salmon;
+}
+
+.icone-curtir{
+    border: 0;
+    background-color: transparent;
+}
+
+.icone-curtir button{
+    border: 0;
+    margin: 10px;
+    background-color: white;
+}
+

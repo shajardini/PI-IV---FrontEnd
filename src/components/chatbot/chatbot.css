@@ -1,0 +1,106 @@
+.container-livro-chat{
+    display: Flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-livro-chat form{
+    background-color: #ffcbab;
+    margin: 20px;padding-bottom: 30px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 4px 1px;
+    padding: 50px;
+}
+
+.container-livro-chat form h1{
+    text-align: center;
+    font-weight: bolder;
+    padding: 30px 0;
+}
+
+.container-livro-chat form input{
+    font-size: 20px;
+    border-radius: 20px;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+.container-livro-chat form select{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.container-livro-chat form p{
+    font-size: 1.2em;
+    color: black;
+    font-weight: bold;
+}
+
+.container-livro-chat form .button-pesquisa{
+   margin: auto;
+   margin-top: 15px;
+   width: 100%;
+   background-color: #fc904c;
+   border: 0px;
+   
+}
+
+
+
+.container-livro-chat .caixa-livro{
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 30px;
+    margin: 20px;
+    width: 400px;
+    min-height: 300px;
+    transition: all 0.3s ease-out;
+    border-left: 3px solid salmon;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container-livro-chat .caixa-livro:hover{
+    transform: translateY(-5px);
+    
+}
+
+.container-livro-chat .caixa-livro li,p{
+    color: #a3a5ae;
+    font-size: 16px;
+}
+.container-livro-chat .caixa-livro img{
+    width: 150px;
+    border: 1px solid salmon;
+}
+
+.icone-curtir{
+    border: 0;
+    background-color: transparent;
+}
+
+.container-livro-chat ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button-pesquisa{
+    margin: 0px 10px;
+    padding: 5px;
+    background-color: salmon;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 3px solid black;
+}
+
+.button-pesquisa:hover{
+    background-color: white;
+    color: white;
+    border: 2px solid salmon;
+}

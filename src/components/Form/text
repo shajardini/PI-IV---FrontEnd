@@ -1,0 +1,91 @@
+import React, { useState } from 'react';
+import { Form, Button } from 'react-bootstrap';
+import './form.css'
+
+function BuscaForm() {
+  const [formValues, setFormValues] = useState({
+    opcao1: '',
+    opcao2: '',
+    opcao3: '',
+    opcao4: '',
+    opcao5: '',
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(formValues);
+    // aqui você pode chamar sua função de busca com os valores selecionados
+  };
+
+  return(
+   
+      <div className='container'>
+        <h1>Encontre seu livro</h1>
+        <p>Primeiro, diga-nos o que procura:</p>
+      <Form onSubmit={handleSubmit}>
+        <Form.Group controlId="opcao1" >
+          <Form.Label>Idade:</Form.Label>
+          <Form.Control as="select" name="opcao1" value={formValues.opcao1} onChange={handleChange} className='form-control'>
+            <option value="">Selecione...</option>
+            <option value="valor3">0</option>
+            <option value="valor1">1</option>
+            <option value="valor2">2</option>
+            <option value="valor3">3</option>
+            <option value="valor3">Todas as Idades</option>
+            
+          </Form.Control>
+        </Form.Group>
+        <Form.Group controlId="opcao2">
+          {/*Deve listar todos os autores*/}
+          <Form.Label>Autor</Form.Label>
+          <Form.Control as="select" name="opcao2" value={formValues.opcao2} onChange={handleChange} className='form-control'>
+            <option value="">Selecione...</option>
+            <option value="valor1">Valor 1</option>
+            <option value="valor2">Valor 2</option>
+            <option value="valor3">Valor 3</option>
+          </Form.Control>
+        </Form.Group>
+        <Form.Group controlId="opcao3">
+          <Form.Label>Tema</Form.Label>
+          <Form.Control as="select" name="opcao3" value={formValues.opcao3} onChange={handleChange} className='form-control'>
+            {/*deve listar todos os temas */}
+            <option value="">Selecione...</option>
+            
+            <option value="valor1">Valor 1</option>
+            <option value="valor2">Valor 2</option>
+            <option value="valor3">Valor 3</option>
+          </Form.Control>
+        </Form.Group>
+        <Form.Group controlId="opcao4">
+          <Form.Label>Série</Form.Label>
+          <Form.Control as="select" name="opcao4" value={formValues.opcao4} onChange={handleChange} className='form-control'>
+            <option value="">Selecione...</option>
+            <option value="valor1">Valor 1</option>
+            <option value="valor2">Valor 2</option>
+            <option value="valor3">Valor 3</option>
+          </Form.Control>
+        </Form.Group>
+        <Form.Group controlId="opcao5">
+          <Form.Label>Opção 5</Form.Label>
+          <Form.Control as="select" name="opcao5" value={formValues.opcao5} onChange={handleChange} className='form-control'>
+            <option value="">Selecione...</option>
+            <option value="valor1">Valor 1</option>
+            <option value="valor2">Valor 2</option>
+            <option value="valor3">Valor 3</option>
+          </Form.Control>
+        </Form.Group>
+        <Button variant="primary" type="submit" className='button'>
+          Buscar
+        </Button>
+        
+         </Form>
+         </div>
+  
+  )}
+
+  export default BuscaForm
