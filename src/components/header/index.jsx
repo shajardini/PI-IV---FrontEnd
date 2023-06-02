@@ -5,7 +5,7 @@ import IMAGEM from './logo.png'
 function Header(){
     return(
         <header>
-            <Link className='logo' to='/'><img src={IMAGEM} /></Link>
+            <Link className='logo' to='/'><img src={IMAGEM} alt='logo' /></Link>
             <div className="menu">
                 <Link to='/'>Home</Link>
                 <Link to='/livros'>Encontre seu livro</Link>

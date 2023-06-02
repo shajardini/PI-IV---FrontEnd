@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import api from "../../services/api";
-import { Link } from "react-router-dom";
 import { FaHeart, FaThumbsDown } from "react-icons/fa";
 import "./livros.css";
 import Pagination from "../paginacao/Pagination";
