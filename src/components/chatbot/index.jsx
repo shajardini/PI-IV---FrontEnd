@@ -13,7 +13,7 @@ function Chatbot() {
   useEffect(() => {
     const fetchAutores = async () => {
       try {
-        const response = await fetch('http://localhost:5000/livros/autor');
+        const response = await fetch('https://backrecomendacaopi.herokuapp.com/livros/autor');
         const data = await response.json();
         setAutores(data);
       } catch (error) {
@@ -23,7 +23,7 @@ function Chatbot() {
 
     const fetchTemas = async () => {
       try {
-        const response = await fetch('http://localhost:5000/livros/temas');
+        const response = await fetch('https://backrecomendacaopi.herokuapp.com/livros/temas');
         const data = await response.json();
         setTemas(data);
       } catch (error) {
@@ -33,7 +33,7 @@ function Chatbot() {
 
     const fetchSeries = async () => {
       try {
-        const response = await fetch('http://localhost:5000/livros/series');
+        const response = await fetch('https://backrecomendacaopi.herokuapp.com/livros/series');
         const data = await response.json();
         setSeries(data);
       } catch (error) {
@@ -43,7 +43,7 @@ function Chatbot() {
 
     const fetchFaixasEtarias = async () => {
       try {
-        const response = await fetch('http://localhost:5000/livros/faixa_etaria');
+        const response = await fetch('https://backrecomendacaopi.herokuapp.com/livros/faixa_etaria');
         const data = await response.json();
         setFaixasEtarias(data);
       } catch (error) {
@@ -74,19 +74,19 @@ function Chatbot() {
       let searchData = [];
 
       if (consultaSelecionada === 'idade' && userInput) {
-        const response = await fetch(`http://localhost:5000/livros/faixa_etaria/${userInput}`);
+        const response = await fetch(`https://backrecomendacaopi.herokuapp.com/livros/faixa_etaria/${userInput}`);
         searchData = await response.json();
       } else if (consultaSelecionada === 'autor') {
-        const response = await fetch(`http://localhost:5000/livros/autor/${userInput}`);
+        const response = await fetch(`https://backrecomendacaopi.herokuapp.com/livros/autor/${userInput}`);
         searchData = await response.json();
       } else if (consultaSelecionada === 'tema' && userInput) {
-        const response = await fetch(`http://localhost:5000/livros/temas/${userInput}`);
+        const response = await fetch(`https://backrecomendacaopi.herokuapp.com/livros/temas/${userInput}`);
         searchData = await response.json();
       } else if (consultaSelecionada === 'serie') {
-        const response = await fetch(`http://localhost:5000/livros/series/${userInput}`);
+        const response = await fetch(`https://backrecomendacaopi.herokuapp.com/livros/series/${userInput}`);
         searchData = await response.json();
       } else if (consultaSelecionada === 'top10') {
-        const response = await fetch(`http://localhost:5000/livros/mais_curtidos?tema=${userInput}`);
+        const response = await fetch(`https://backrecomendacaopi.herokuapp.com/livros/mais_curtidos?tema=${userInput}`);
         searchData = await response.json();
       }
 
@@ -238,11 +238,11 @@ function Chatbot() {
               <img src={livro.img_url} alt={livro.titulo} />
               <p>{livro.titulo}</p>
               <p>Autor: {livro.autor}</p>
-              <p>Quantidade em estoque: {livro.quantidade || 0}</p>
+              <p >Quantidade em estoque: {livro.quantidade || 0}</p>
             </li>
           ))}
         </ul>
-        <p>Quantidade de livros: {searchResult.length}</p>
+        <p className='quantidade'>Quantidade de livros: {searchResult.length}</p>
       </div>
     </div>
   );

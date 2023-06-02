@@ -6,7 +6,7 @@ const AutoresCurtidos = () => {
   const [autores, setAutores] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/autores-curtidos')
+    fetch('https://backrecomendacaopi.herokuapp.com/autores-curtidos')
       .then(response => response.json())
       .then(data => {
         // Realiza a agregação dos autores iguais
@@ -75,6 +75,7 @@ const AutoresCurtidos = () => {
       <hr />
       <h2>Autores Mais Curtidos</h2>
       <Bar data={chartData} options={chartOptions} />
+      <hr className='hr'/>
     </div>
   );
 };

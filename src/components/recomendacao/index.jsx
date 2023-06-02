@@ -8,7 +8,7 @@ const RecomendacoesLivros = () => {
   useEffect(() => {
     const fetchLivrosRecomendados = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/recomendacoes');
+        const response = await axios.get('https://backrecomendacaopi.herokuapp.com/recomendacoes');
         setLivrosRecomendados(response.data);
       } catch (error) {
         console.error(error);

@@ -1,6 +1,7 @@
 .container-recomendacao h2{
     margin-top: 10px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .container-recomendacao .container-livro .caixa-livro{

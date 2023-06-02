@@ -12,7 +12,7 @@ const Grafico = ({ options }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/livros'); // Substitua 'URL_DA_API_DE_LIVROS' pela URL real da sua API
+        const response = await axios.get('https://backrecomendacaopi.herokuapp.com/livros'); // Substitua 'URL_DA_API_DE_LIVROS' pela URL real da sua API
         const data = response.data;
 
         // Ordena os dados em ordem decrescente com base no número de curtidas

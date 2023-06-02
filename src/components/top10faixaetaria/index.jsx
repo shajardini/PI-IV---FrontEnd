@@ -5,7 +5,7 @@ function LivrosCurtidosPorFaixaEtaria() {
   const [livros, setLivros] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/livros/curtidas_por_faixa_etaria')
+    fetch('https://backrecomendacaopi.herokuapp.com/livros/curtidas_por_faixa_etaria')
       .then(response => response.json())
       .then(data => setLivros(data))
       .catch(error => console.log(error));
@@ -13,12 +13,12 @@ function LivrosCurtidosPorFaixaEtaria() {
 
   return (
     <div className='livro-por-faixa'>
-      <hr/>
+      <hr className='hr'/>
       <h2>Livros mais curtidos por faixa etária</h2>
       {Object.entries(livros).map(([faixaEtaria, livros]) => (
         <div key={faixaEtaria} className='div-faixa'>
-          
-          <h3> Faixa etária:  {faixaEtaria}</h3>
+          <hr className='hr'/>
+          <h3> Faixa etária:  {faixaEtaria} anos</h3>
           <div className='container-livro'>
             {livros.map(livro => (
               <div className='caixa-livro' key={livro.id}>
@@ -29,6 +29,7 @@ function LivrosCurtidosPorFaixaEtaria() {
                 <p>Quantidade: {livro.quantidade}</p>
                 <p>Avaliação: {livro.avaliacao}</p>
                <img src={livro.img_url} alt={livro.titulo} />
+               <hr className='hr'/>
               </div>
             ))}
           </div>
